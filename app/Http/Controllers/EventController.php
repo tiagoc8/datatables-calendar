@@ -17,14 +17,14 @@ class EventController extends Controller
         return response()->json($events);
     }
 
-    public function store(Request $request){
+    public function store(EventRequest $request){
 
         Event::create($request->all());
 
         return response()->json(true);
     }
 
-    public function update(Request $request){
+    public function update(EventRequest $request){
 
         $event = Event::where('id', $request->id)->first();
 
@@ -33,5 +33,13 @@ class EventController extends Controller
         $event-> save();
 
         return response()->json(true);
+    }
+
+    public function destroy(Request $request){
+
+        Event::where('id', $request->id)->delete();
+        
+        return response()->json(true);
+
     }
 }

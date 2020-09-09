@@ -31,4 +31,7 @@ Route::put('/event-update', 'EventController@update')->name('routeEventUpdate');
 
 Route::post('/event-store', 'EventController@store')->name('routeEventStore');
 
+Route::delete('/event-destroy', 'EventController@destroy')->name('routeEventDelete');
+
+
 

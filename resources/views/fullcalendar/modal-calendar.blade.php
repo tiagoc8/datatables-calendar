@@ -8,12 +8,13 @@
         </button>
       </div>
       <div class="modal-body">
+        <div id="message"></div>
         <form id="formEvent">
             <div class="form-group row">
                 <label for="title" class="col-sm-4 col-form-label">Título</label>
                 <div class="col-sm-8">
                 <input type="text" class="form-control" id="title" name="title">
-                <input type="text" name="id">
+                <input type="hidden" name="id">
                 </div>
             </div>
             <div class="form-group row">
