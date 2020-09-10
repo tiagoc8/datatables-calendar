@@ -40,6 +40,9 @@
         if (document.getElementById('drop-remove').checked) {
           // if so, remove the element from the "Draggable Events" list
           element.draggedEl.parentNode.removeChild(element.draggedEl);
+
+          Event._method = "DELETE";
+          sendEvent(routeEvents('routeFastEventDelete'), Event);
         }
 
         let start = moment(`${element.dateStr} ${Event.start}`).format("YYYY-MM-DD HH:mm:ss");
@@ -49,6 +52,7 @@
         Event.end = end;
 
         delete Event.id;
+        delete Event._method;
 
         sendEvent(routeEvents('routeEventStore'), Event);
 
@@ -74,7 +78,7 @@
       },
       eventClick:function(element){
 
-        clearMessages('#message');
+        clearMessages('.message');
         resetForm("#formEvent");
         
         $("#modalCalendar").modal('show');
@@ -119,7 +123,7 @@
       },
       select:function(element){
 
-        clearMessages('#message');
+        clearMessages('.message');
         resetForm("#formEvent");
         
         $("#modalCalendar").modal('show');

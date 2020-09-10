@@ -11,6 +11,6 @@ class DatatableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Datatable::class, 50)->create();
+        //factory(App\Datatable::class, 50)->create();
     }
 }

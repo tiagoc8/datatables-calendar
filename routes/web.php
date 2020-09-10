@@ -33,5 +33,14 @@ Route::post('/event-store', 'EventController@store')->name('routeEventStore');
 
 Route::delete('/event-destroy', 'EventController@destroy')->name('routeEventDelete');
 
+//eventos rápidos
+
+Route::delete('/fast-delete-event', 'FastEventController@destroy')->name('routeFastEventDelete');
+
+Route::put('/fast-update-event', 'FastEventController@update')->name('routeFastEventUpdate');
+
+Route::post('/fast-store-event', 'FastEventController@store')->name('routeFastEventStore');
+
+
 
 
