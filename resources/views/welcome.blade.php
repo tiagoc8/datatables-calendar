@@ -90,6 +90,7 @@
             <div class="content">
              <a href="/hobby">Datatable</a>   
              <a href="/fullcalendar">Calendar</a>   
+             <a href="/products/create">Upload</a>
             </div>
         </div>
 

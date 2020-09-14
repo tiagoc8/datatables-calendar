@@ -23,6 +23,8 @@ Route::get('/data', 'DatatableController@index');
 
 Route::resource('hobby', 'HobbyController');
 
+//Calendário
+
 Route::get('fullcalendar', 'FullCalendarController@index')->name('index');
 
 Route::get('/load-events', 'EventController@loadEvents')->name('routeLoadEvents');
@@ -40,6 +42,14 @@ Route::delete('/fast-delete-event', 'FastEventController@destroy')->name('routeF
 Route::put('/fast-update-event', 'FastEventController@update')->name('routeFastEventUpdate');
 
 Route::post('/fast-store-event', 'FastEventController@store')->name('routeFastEventStore');
+
+//Upload
+
+Route::view('form', 'upload.form');
+
+Route::post('upload', 'UploadController@upload')->name('upload');
+
+Route::resource('products', 'ProductController');
 
 
 
